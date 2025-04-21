@@ -205,17 +205,4 @@ Run tests (if implemented):poetry run pytest
 
 
 
-Submitting the Project
 
-Push the code to a GitHub repository:git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/Mu240/customer-support-backend.git
-git push -u origin main
-
-
-Share the repository link with the assessment team.
-Ensure the README.md is updated and all environment variables are documented in .env.example.
-
-
-This project demonstrates a robust, maintainable backend built with modern Python practices, adhering to OOP principles and leveraging FastAPI’s powerful features. Thank you for the opportunity to showcase my skills!
