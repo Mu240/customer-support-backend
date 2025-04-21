@@ -1,0 +1,35 @@
+
+services:
+  app:
+    # Build application from Dockerfile
+    build: .
+    # Map port 8000 for API access
+    ports:
+      - "8000:8000"
+    # Load environment variables from .env
+    env_file:
+      - .env
+    # Depend on database service
+    depends_on:
+      - db
+    # Mount local code for development
+    volumes:
+      - .:/app
+  db:
+    # Use PostgreSQL 15 image
+    image: postgres:15
+    # Configure database credentials
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: customer_support
+    # Map port 5432 for local access
+    ports:
+      - "5432:5432"
+    # Persist database data
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+# Define named volume for PostgreSQL data
+volumes:
+  postgres_data:
