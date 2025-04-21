@@ -210,7 +210,7 @@ Submitting the Project
 Push the code to a GitHub repository:git init
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/your-repo/customer-support-backend.git
+git remote add origin https://github.com/Mu240/customer-support-backend.git
 git push -u origin main
 
 
